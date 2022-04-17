@@ -8,13 +8,13 @@ from datetime import datetime
 
 load_dotenv()
 
-apiKey = os.getenv("API_KEY")
-apiKeySecret = os.getenv("API_KEY_SECRET")
-accessToken = os.getenv("ACCESS_TOKEN")
-accessTokenSecret = os.getenv("ACCESS_TOKEN_SECRET")
-bearerToken = os.getenv("BEARER_TOKEN")
+consumer_key = os.getenv("API_KEY")
+consumer_secret = os.getenv("API_KEY_SECRET")
+access_token = os.getenv("ACCESS_TOKEN")
+access_token_secret = os.getenv("ACCESS_TOKEN_SECRET")
+bearer_token = os.getenv("BEARER_TOKEN")
 
-client = tweepy.Client(bearer_token = bearerToken, consumer_key = apiKey, consumer_secret = apiKeySecret, access_token = accessToken, access_token_secret = accessTokenSecret)
+client = tweepy.Client(bearer_token, consumer_key, consumer_secret, access_token, access_token_secret)
 
 def clear():
     command = "clear"
