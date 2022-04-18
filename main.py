@@ -22,6 +22,13 @@ def clear():
         command = "cls"
     os.system(command)
 
+def pause():
+    command = "pause"
+    if os.name in ("nt", "dos"):
+        return os.system(command)
+    else:
+        return input("Press any key to continue . . .")
+
 inputMessage = [
     "What are you gonna tweet today? ",
     "What is on your mind right now? ",
@@ -56,6 +63,7 @@ if choiceInput == "1":
     console = Console()
     print("\n")
     console.print(table)
+    pause()
 elif choiceInput == "2":
     clear()
 
@@ -76,6 +84,7 @@ elif choiceInput == "2":
     console = Console()
     print("\n")
     console.print(table)
+    pause()
 elif choiceInput == "3": {
     quit()
 }
